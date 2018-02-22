@@ -1,0 +1,18 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    loaded="onLoaded">
+
+    <ActionBar title=" My Contact" android.icon="res://icon_white" android.iconVisibility="always">
+        <ActionItem ios.systemIcon="4" android.systemIcon="ic_menu_add" ios.position="right" tap="addContact"></ActionItem>
+    </ActionBar>
+    
+    <ListView items="{{ items }}" itemTap="editContact">
+        <ListView.itemTemplate>
+            <StackLayout class="p-20">
+                <Label text="{{ name }}" textWrap="true" class="title" />
+                <Label text="{{ phone }}" textWrap="true" class="phone" />
+                <Label text="{{ description }}" textWrap="true" class="description" />
+            </StackLayout>
+        </ListView.itemTemplate>
+     </ListView>
+</Page>

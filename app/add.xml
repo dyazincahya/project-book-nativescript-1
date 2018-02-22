@@ -1,0 +1,20 @@
+<Page 
+    xmlns="http://schemas.nativescript.org/tns.xsd" 
+    loaded="onLoaded">
+
+    <ActionBar title="Add Contact">
+        <NavigationButton text="Back" android.systemIcon="ic_menu_back" tap="backButton"/>
+        <ActionItem ios.systemIcon="3" android.systemIcon="ic_menu_save" ios.position="right" tap="saveData"></ActionItem>
+    </ActionBar>
+    
+    <StackLayout class="p-20">
+        <Label text="Name" />
+        <TextField text="{{ name }}" hint="Full Name..." />
+
+        <Label text="Phone" />
+        <TextField text="{{ phone }}" hint="Phone Number..." keyboardType="number" />
+        
+        <Label text="Description" />
+        <TextView text="{{ description }}" hint="Description..."  />
+    </StackLayout>
+</Page>
